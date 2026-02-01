@@ -35,7 +35,7 @@ elif Question == "Division":
 elif Question == "Power":
     print("Power: " + str(power_numbers))
 
-elif Question != "Addition" or "Subtraction" or "Multiplication" or "Division" or "Power":
+else:
     print("Invalid operation. Please choose a valid operation next time.")
   
 print("Thank you for using the basic arithmetic operations program, " + name + "! See ya")
