@@ -15,7 +15,8 @@ while input_choice == "yes":
     input_choice = input().lower()
 
     while input_choice == "no":
-        print("Thank you for using the Dice Roller Program, " + name + "! Vielen Dank!")
+            print("Thank you for using the Dice Roller Program, " + name + "! Vielen Dank!")
          
+            break
 
 

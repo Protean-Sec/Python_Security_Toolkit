@@ -33,7 +33,7 @@ def generate_password():
     if include_symbols:
         character_pool += string.punctuation
     
-    # FIX: sys.exit is now indented inside the IF block
+     
     if not character_pool:
         print("Bro you need to select at least one character type! Try again")
         sys.exit(1)
