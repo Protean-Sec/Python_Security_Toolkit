@@ -1,15 +1,15 @@
 import string
-import sys
+import random
 def encrypt_message (message, shift):
-    alphabet = string.ascii_uppercase
-    shift = shift % 26
+    alphabet = "X7?#Y5L$*QWE9R_T@U!IOPASDF8G&HJKLZCVBNM123460%"
+    shift = shift % len(alphabet)
     encrypted_message = ""
      
     for char in message:
       if char in alphabet:
         original_message = ""
         original_message = alphabet.find(char)
-        new_position = (original_message + shift) % 26
+        new_position = (original_message + shift) % len(alphabet)
         new_char = alphabet[new_position]
         encrypted_message += new_char
     print("Encrypted message: " + encrypted_message)
