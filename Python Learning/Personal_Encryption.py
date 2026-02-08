@@ -1,7 +1,7 @@
 import string
 import random
 def encrypt_message (message, shift):
-    alphabet = "X7?#Y5L$*QWE9R_T@U!IOPASDF8G&HJKLZCVBNM123460%"
+    alphabet = "X7?#Y5$*QWE9R_T@U!IOPASDF8G&HJKLZCVBNM123460% "
     shift = shift % len(alphabet)
     encrypted_message = ""
      
@@ -20,4 +20,4 @@ print("Welcome " + name.upper() + "! Let's get started!" + "\nEnter the message 
 message = input("Message: ")
 message = message.upper()
 
-encrypt_message(message, 3)
+encrypt_message(message, 22)
