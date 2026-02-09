@@ -7,9 +7,8 @@ def encrypt_message (message, shift):
      
     for char in message:
       if char in alphabet:
-        original_message = ""
-        original_message = alphabet.find(char)
-        new_position = (original_message + shift) % len(alphabet)
+        char_index = alphabet.find(char)
+        new_position = (char_index + shift) % len(alphabet)
         new_char = alphabet[new_position]
         encrypted_message += new_char
     print("Encrypted message: " + encrypted_message)
