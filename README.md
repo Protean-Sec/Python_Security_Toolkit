@@ -22,7 +22,7 @@ Currently the project has:
 
 **Encryption Engines**
 
-**Casear Cipher:** A custom Casear cipher that handles variable shifts. Includes its encryption and a "cracker" that uses brute force as a decryption tool.
+**Caesar Cipher:** A custom Caesar cipher that handles variable shifts. Includes its encryption and a "cracker" that uses brute force as a decryption tool.
 
 **Atbash Cipher:**  Cipher includes custom made alphabet and inverts plain text. Also includes "cracker".
 
