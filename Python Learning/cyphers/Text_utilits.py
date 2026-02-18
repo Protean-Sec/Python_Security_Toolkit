@@ -19,19 +19,19 @@ common_words = ["THE", "AND", "FOR", "ARE", "BUT", "NOT", "YOU", "ALL",
                 "LATER", "SOON", "NEVER", "ALWAYS", "SOMETIMES", "OFTEN", "RARELY", "USUALLY",
                 "HAPPY", "SAD", "ANGRY", "EXCITED", "BORED", "TIRED", "SCARED", "CONFUSED", "SURPRISED", "DISGUSTED",
                 "LOVE", "HATE", "LIKE", "DISLIKE", "ADORE", "DESPISE", "RESPECT", "FEAR", "TRUST", "ENVY",
-                "SMILE", "FROWN", "LAUGH", "CRY", "SHOUT", "WHISPER", "SING", "DANCE", "RUN", "WALK"
-                "HELLO", "GOODBYE", "PLEASE", "THANK", "SORRY", "YES", "NO", "MAYBE", "ALRIGHT", "OKAY"
-                "DAY", "NIGHT", "MORNING", "AFTERNOON", "EVENING", "WEEK", "MONTH", "YEAR", "TIME", "HOUR"
+                "SMILE", "FROWN", "LAUGH", "CRY", "SHOUT", "WHISPER", "SING", "DANCE", "RUN", "WALK",
+                "HELLO", "GOODBYE", "PLEASE", "THANK", "SORRY", "YES", "NO", "MAYBE", "ALRIGHT", "OKAY",
+                "DAY", "NIGHT", "MORNING", "AFTERNOON", "EVENING", "WEEK", "MONTH", "YEAR", "TIME", "HOUR",
                 "SHALL", "WILL", "MUST", "CAN", "COULD", "MAY", "MIGHT", "WOULD", "SHOULD", "DID", "SUCCEDED", 
-                "FAILED", "WIN", "LOSE", "VICTORY", "DEFEAT", "SUCCESS", "FAILURE", "TRIUMPH", "DISASTER", "SUCCEED"
-                "LONG", "SHORT", "TALL", "SMALL", "BIG", "LARGE", "HUGE", "MINIATURE", "GIGANTIC", "TINY"
-                "ENOUGH", "TOO MUCH", "TOO LITTLE", "SUFFICIENT", "INSUFFICIENT", "PLENTY", "SCARCE", "ABUNDANT", "MEAGER"
-                "PERHAPS", "CERTAINLY", "DEFINITELY", "PROBABLY", "POSSIBLY", "UNLIKELY", "LIKELY", "SURELY", "DOUBTLESSLY"
-                "WHAT", "WHERE", "WHEN", "WHY", "HOW", "WHICH", "WHO", "WHOM", "WHOSE", "WHATEVER"
-                "NOUN", "VERB", "ADJECTIVE", "ADVERB", "PRONOUN", "PREPOSITION", "CONJUNCTION", "INTERJECTION"
-                "JAB", "CROSS", "HOOK", "UPPERCUT", "SLIP", "DODGE", "BLOCK", "PARRY", "FEINT", "COMBO", "KNOCKOUT"
-                "THEY'RE", "WE'RE", "YOU'RE", "IT'S", "I'M", "HE'S", "SHE'S", "THAT'S", "WHAT'S", "WHERE'S"
-                "DON'T", "CAN'T", "WON'T", "SHOULDN'T", "COULDN'T", "WOULDN'T", "MUSTN'T", "HAVEN'T", "ISN'T", "AREN'T"
+                "FAILED", "WIN", "LOSE", "VICTORY", "DEFEAT", "SUCCESS", "FAILURE", "TRIUMPH", "DISASTER", "SUCCEED",
+                "LONG", "SHORT", "TALL", "SMALL", "BIG", "LARGE", "HUGE", "MINIATURE", "GIGANTIC", "TINY",
+                "ENOUGH", "TOO MUCH", "TOO LITTLE", "SUFFICIENT", "INSUFFICIENT", "PLENTY", "SCARCE", "ABUNDANT", "MEAGER",
+                "PERHAPS", "CERTAINLY", "DEFINITELY", "PROBABLY", "POSSIBLY", "UNLIKELY", "LIKELY", "SURELY", "DOUBTLESSLY",
+                "WHAT", "WHERE", "WHEN", "WHY", "HOW", "WHICH", "WHO", "WHOM", "WHOSE", "WHATEVER",
+                "NOUN", "VERB", "ADJECTIVE", "ADVERB", "PRONOUN", "PREPOSITION", "CONJUNCTION", "INTERJECTION",
+                "JAB", "CROSS", "HOOK", "UPPERCUT", "SLIP", "DODGE", "BLOCK", "PARRY", "FEINT", "COMBO", "KNOCKOUT",
+                "THEY'RE", "WE'RE", "YOU'RE", "IT'S", "I'M", "HE'S", "SHE'S", "THAT'S", "WHAT'S", "WHERE'S",
+                "DON'T", "CAN'T", "WON'T", "SHOULDN'T", "COULDN'T", "WOULDN'T", "MUSTN'T", "HAVEN'T", "ISN'T", "AREN'T",
                 "IDK", "TBH", "BRB", "GG", "I'LL", "YOU'LL", "HE'LL", "SHE'LL", "WE'LL", "THEY'LL", "I'VE", "YOU'VE", 
                 "HE'S", "SHE'S", "WE'VE", "THEY'VE", "BED", "TABLE", "CHAIR", "SOFA", "LAMP", "DOOR", "WINDOW", "FLOOR", "CEILING", "WALL",
                 "CAR", "BIKE", "BUS", "TRAIN", "PLANE", "BOAT", "SHIP", "SUBMARINE", "SPACESHIP", "ROCKET", "ANYONE", "EVERYONE", "SOMEONE", 
@@ -40,7 +40,7 @@ common_words = ["THE", "AND", "FOR", "ARE", "BUT", "NOT", "YOU", "ALL",
 def count_english_matched(text):
     text = text.upper()
     matched_words = 0
-    words = text.split("")
+    words = text.split()
     for word in words:
         clean_word = word.strip(string.punctuation)
         if clean_word in common_words:

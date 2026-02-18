@@ -2,7 +2,6 @@ import string
 import random
 
 chaos_characters = string.ascii_letters + string.digits + string.punctuation + string.whitespace
-smoke_screen = random.choice(chaos_characters)
 def Protean_encryption():
     print("Welcome to Protean Cipher! Let's encrypt your message with a unique twist!")
     
@@ -13,8 +12,8 @@ def Protean_encryption():
         key_index = i % len(protean_types)
         current_key = protean_types[key_index]
         encrypted_letter = chr(ord(letter) ^ current_key)
-        fake_char = random.choice(chaos_characters)
-        final_encryption += fake_char + encrypted_letter
+        smoke_screen = random.choice(chaos_characters)
+        final_encryption += smoke_screen + encrypted_letter
 
     print(f"Your encrypted message is: {final_encryption}")
     
@@ -27,6 +26,7 @@ def Protean_encryption():
             decrypted_char = chr(ord(char) ^ current_key)
             decrypted_message += decrypted_char
         print(f"Decoded: {decrypted_message}")
-
-    
+    elif check.lower() == "no":
+        print("Alright! Your message remains a mystery. Thanks for using Protean Cipher!")
+  
 Protean_encryption()
