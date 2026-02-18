@@ -12,14 +12,21 @@ def Protean_encryption():
     for i, letter in enumerate(message):
         key_index = i % len(protean_types)
         current_key = protean_types[key_index]
-
-    
-    for letter in message:
-        encrypted_letter = chr((ord(letter) ^ current_key))
+        encrypted_letter = chr(ord(letter) ^ current_key)
         fake_char = random.choice(chaos_characters)
         final_encryption += fake_char + encrypted_letter
-    print(f"You entered: {message}")
+
     print(f"Your encrypted message is: {final_encryption}")
     
-Protean_encryption()
+    check = input("Do you want to decrypt it? (yes/no): ")
+    if check.lower() == "yes":
+        real_chars = final_encryption[1::2]
+        decrypted_message = ""
+        for i, char in enumerate(real_chars):
+            current_key = protean_types[i % len(protean_types)]
+            decrypted_char = chr(ord(char) ^ current_key)
+            decrypted_message += decrypted_char
+        print(f"Decoded: {decrypted_message}")
 
+    
+Protean_encryption()
