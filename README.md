@@ -29,7 +29,10 @@ Currently the project has:
 **Feature:** Includes an English language detection algorithm to automatically score potential decryptions.
 **Protean_cypher:** A custom made cypher that is inspired using Pokémon logic, specfically Greninja's ability to switch types, protean. It is a Polyalphabetic Stream Cipher with interleaving Null Obfuscation. 
 
+**Protean_cypher:** A custom made cypher that is inspired using Pokémon logic, specfically Greninja's ability to switch types, protean. It is a Polyalphabetic Stream Cipher with interleaving Null Obfuscation. 
+
 In other words: A machine that uses a rotating list of Pokémon keys (Polyalphabetic) to scramble a flow of letters (Stream) and hides the result by weaving in (Interleaved) random garbage (Null Obfuscation).
+
 
 
 **Security Tools**
