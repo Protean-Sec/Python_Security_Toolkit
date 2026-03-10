@@ -70,3 +70,4 @@ def crack_caesar_cipher(encrypted_text):
 secret_message = input("Enter the encrypted message: ")
 secret_message = secret_message.upper()
 crack_caesar_cipher(secret_message)
+
