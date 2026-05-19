@@ -1,4 +1,5 @@
 import os
+import time
 import shutil
 from pathlib import Path
 # Path.home() finds your user folder (e.g., C:/Users/Name), 
@@ -28,6 +29,7 @@ file_map = {
 def organize_folder ():
     
     for file in target_dir.iterdir(): 
+        print("Scanning...")
         # .iterdir() allows us to loop through every item inside the target directory.
         if file.is_file():
         # Move only files
@@ -52,8 +54,15 @@ def organize_folder ():
 
 
 if __name__ == "__main__":
-    organize_folder()
+    while True:
+       try:
+          organize_folder()
+       except Exception as e:
+          print(f"Error: {e}")
 
+       time.sleep(60)
+          
+          
 
             
 
