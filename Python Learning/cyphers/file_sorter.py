@@ -21,17 +21,20 @@ file_map = {
     ".zip"  : "Archives",
     ".exe"  : "Archives",
     ".msi"  : "Archives",
-    ".rar"  : "Archives.",
+    ".rar"  : "Archives",
     ".pptx" : "Documents",
     ".xlsx" : "Documents",
+    ".webp" : "Pictures"
 
 }
 def organize_folder ():
-    
-    for file in target_dir.iterdir(): 
-        print("Scanning...")
+   print("Scanning...")
+     
+   moved_any = False 
+   for file in target_dir.iterdir(): 
+        
         # .iterdir() allows us to loop through every item inside the target directory.
-        if file.is_file():
+       if file.is_file():
         # Move only files
 
            extension = file.suffix.lower()
@@ -52,6 +55,11 @@ def organize_folder ():
              # first argument is the source, the second is the destination folder
              print(f"Moved {file.name} to {folder_name}")
 
+             moved_any = True
+
+   if not moved_any:
+     print("No files were found")
+
 
 if __name__ == "__main__":
     while True:
@@ -60,12 +68,4 @@ if __name__ == "__main__":
        except Exception as e:
           print(f"Error: {e}")
 
-       time.sleep(60)
-          
-          
-
-            
-
-
-        
-
+       time.sleep(300)
