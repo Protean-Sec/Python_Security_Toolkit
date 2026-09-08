@@ -37,12 +37,10 @@ def choosing_class (class_types):
         print("Choose a path hero! Your class will affect you in your journey! ")
         class_type = input("You have 3 choices: MAGE, WARRIOR, or ROGUE ").upper()
         if class_type in class_types:
-            print(f"You chose {class_type}! ")
+            print(f"You chose {class_type}! \nAn excellent choice! Here's some info about your class! ")
             print(classes[class_type])
             return class_type
         
-        
-
         print("\nInvalid choice! Please look at the options and try again.\n")
 
 
